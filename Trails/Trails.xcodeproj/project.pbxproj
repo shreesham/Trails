@@ -12,6 +12,7 @@
 		1016C9551E1C859400421C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1016C9531E1C859400421C4B /* Main.storyboard */; };
 		1016C9571E1C859400421C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1016C9561E1C859400421C4B /* Assets.xcassets */; };
 		1016C95A1E1C859400421C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1016C9581E1C859400421C4B /* LaunchScreen.storyboard */; };
+		B555B24DA382DF9D8C8EA613 /* Pods_Trails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF278FCD4F1FC578A4A47416 /* Pods_Trails.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		1016C9561E1C859400421C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1016C9591E1C859400421C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1016C95B1E1C859400421C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E1AB338FEC585A61BFF87DA /* Pods-Trails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trails.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trails/Pods-Trails.release.xcconfig"; sourceTree = "<group>"; };
+		BF278FCD4F1FC578A4A47416 /* Pods_Trails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A35A5EB5479CD52934D0A4 /* Pods-Trails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trails.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trails/Pods-Trails.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B555B24DA382DF9D8C8EA613 /* Pods_Trails.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				1016C94E1E1C859400421C4B /* Trails */,
 				1016C94D1E1C859400421C4B /* Products */,
+				B889907809D4A46677E84746 /* Pods */,
+				1E571F8E5E2156AEE6034EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Trails;
 			sourceTree = "<group>";
 		};
+		1E571F8E5E2156AEE6034EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF278FCD4F1FC578A4A47416 /* Pods_Trails.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B889907809D4A46677E84746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1A35A5EB5479CD52934D0A4 /* Pods-Trails.debug.xcconfig */,
+				9E1AB338FEC585A61BFF87DA /* Pods-Trails.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1016C95E1E1C859400421C4B /* Build configuration list for PBXNativeTarget "Trails" */;
 			buildPhases = (
+				91C51DBCF519DAB976CB7DB2 /* [CP] Check Pods Manifest.lock */,
 				1016C9481E1C859400421C4B /* Sources */,
 				1016C9491E1C859400421C4B /* Frameworks */,
 				1016C94A1E1C859400421C4B /* Resources */,
+				F2F8ABE1370066BD17D48EC3 /* [CP] Embed Pods Frameworks */,
+				B7283ED8927F6675504180E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91C51DBCF519DAB976CB7DB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7283ED8927F6675504180E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trails/Pods-Trails-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2F8ABE1370066BD17D48EC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trails/Pods-Trails-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1016C9481E1C859400421C4B /* Sources */ = {
@@ -247,6 +322,7 @@
 		};
 		1016C95F1E1C859400421C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A35A5EB5479CD52934D0A4 /* Pods-Trails.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Trails/Info.plist;
@@ -258,6 +334,7 @@
 		};
 		1016C9601E1C859400421C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E1AB338FEC585A61BFF87DA /* Pods-Trails.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Trails/Info.plist;
